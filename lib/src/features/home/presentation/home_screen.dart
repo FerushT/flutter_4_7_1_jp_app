@@ -32,152 +32,16 @@ class HomeScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 12),
                 SingleChildScrollView(
-                  scrollDirection: Axis.vertical,
+                  scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(40),
-                        child: Container(
-                          height: 40,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(40),
-                            border: Border.all(
-                              color: const Color.fromARGB(255, 223, 186, 214),
-                              width: 0.8,
-                            ),
-                          ),
-                          child: BackdropFilter(
-                            filter:
-                                ImageFilter.blur(sigmaX: 18.0, sigmaY: 18.0),
-                            child: Material(
-                              color: Colors.transparent,
-                              child: GestureDetector(
-                                onTap: () {},
-                                child: const Center(
-                                  child: Padding(
-                                    padding:
-                                        EdgeInsets.symmetric(horizontal: 16.0),
-                                    child: Text(
-                                      "All categories",
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(width: 8), // Add spacing between buttons
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(40),
-                        child: Container(
-                          height: 40,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(40),
-                            border: Border.all(
-                              color: const Color.fromARGB(255, 223, 186, 214),
-                              width: 0.8,
-                            ),
-                          ),
-                          child: BackdropFilter(
-                            filter:
-                                ImageFilter.blur(sigmaX: 18.0, sigmaY: 18.0),
-                            child: Material(
-                              color: Colors.transparent,
-                              child: GestureDetector(
-                                onTap: () {},
-                                child: const Center(
-                                  child: Padding(
-                                    padding:
-                                        EdgeInsets.symmetric(horizontal: 16.0),
-                                    child: Text(
-                                      "Salty",
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
+                      _buildCategoryButton("All categories"),
                       const SizedBox(width: 8),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(40),
-                        child: Container(
-                          height: 40,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(40),
-                            border: Border.all(
-                              color: const Color.fromARGB(255, 223, 186, 214),
-                              width: 0.8,
-                            ),
-                          ),
-                          child: BackdropFilter(
-                            filter:
-                                ImageFilter.blur(sigmaX: 18.0, sigmaY: 18.0),
-                            child: Material(
-                              color: Colors.transparent,
-                              child: GestureDetector(
-                                onTap: () {},
-                                child: const Center(
-                                  child: Padding(
-                                    padding:
-                                        EdgeInsets.symmetric(horizontal: 16.0),
-                                    child: Text(
-                                      "Sweet",
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
+                      _buildCategoryButton("Salty"),
                       const SizedBox(width: 8),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(40),
-                        child: Container(
-                          height: 40,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(40),
-                            border: Border.all(
-                              color: const Color.fromARGB(255, 223, 186, 214),
-                              width: 0.8,
-                            ),
-                          ),
-                          child: BackdropFilter(
-                            filter:
-                                ImageFilter.blur(sigmaX: 18.0, sigmaY: 18.0),
-                            child: Material(
-                              color: Colors.transparent,
-                              child: GestureDetector(
-                                onTap: () {},
-                                child: const Center(
-                                  child: Padding(
-                                    padding:
-                                        EdgeInsets.symmetric(horizontal: 16.0),
-                                    child: Text(
-                                      "Dry Fruits",
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
+                      _buildCategoryButton("Sweet"),
+                      const SizedBox(width: 8),
+                      _buildCategoryButton("Dry Fruits"),
                     ],
                   ),
                 ),
@@ -185,6 +49,42 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  Widget _buildCategoryButton(String text) {
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(40),
+      child: Container(
+        height: 40,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(40),
+          border: Border.all(
+            color: const Color.fromARGB(255, 223, 186, 214),
+            width: 0.8,
+          ),
+        ),
+        child: BackdropFilter(
+          filter: ImageFilter.blur(sigmaX: 18.0, sigmaY: 18.0),
+          child: Material(
+            color: Colors.transparent,
+            child: GestureDetector(
+              onTap: () {},
+              child: Center(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  child: Text(
+                    text,
+                    style: const TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }
