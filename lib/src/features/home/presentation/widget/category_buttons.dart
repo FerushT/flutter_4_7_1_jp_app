@@ -21,7 +21,7 @@ Widget buildCategoryButton(Widget child, double width) {
         child: ElevatedButton(
           onPressed: () {},
           style: ButtonStyle(
-            padding: WidgetStatePropertyAll(EdgeInsets.zero),
+            padding: const WidgetStatePropertyAll(EdgeInsets.zero),
             shadowColor: WidgetStateProperty.all(Colors.transparent),
             backgroundColor: WidgetStateProperty.all(
               const Color.fromARGB(40, 255, 255, 255),
@@ -49,10 +49,10 @@ Widget buildCategoryButtonSelected(Widget child) {
         child: ElevatedButton(
           onPressed: () {},
           style: ButtonStyle(
-            padding: WidgetStatePropertyAll(EdgeInsets.zero),
+            padding: const WidgetStatePropertyAll(EdgeInsets.zero),
             shadowColor: WidgetStateProperty.all(Colors.transparent),
             backgroundColor: WidgetStateProperty.all(
-              Color.fromARGB(187, 255, 255, 255),
+              const Color.fromARGB(187, 255, 255, 255),
             ),
           ),
           child: child,
