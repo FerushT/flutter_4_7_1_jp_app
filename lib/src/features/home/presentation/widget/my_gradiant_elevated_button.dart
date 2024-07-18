@@ -24,19 +24,21 @@ class MyGradientElevatedButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.transparent, shadowColor: Colors.transparent),
-      onPressed: onPressed,
-      child: Container(
-        height: height,
-        width: width,
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [colorBegin, colorEnd],
-          ),
-          borderRadius: BorderRadius.circular(borderRadius),
+    return Container(
+      height: height,
+      width: width,
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [colorBegin, colorEnd],
         ),
+        borderRadius: BorderRadius.circular(borderRadius),
+      ),
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+            padding: EdgeInsets.all(0),
+            backgroundColor: Colors.transparent,
+            shadowColor: Colors.transparent),
+        onPressed: onPressed,
         child: Center(
           child: Text(
             text,
