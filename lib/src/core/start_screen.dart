@@ -24,7 +24,7 @@ class StartScreen extends StatelessWidget {
               height: 550,
               width: 550,
               child: Image.asset(
-                "assets/grafiken/chick cupcakes_3D.png",
+                "assets/grafiken/cat_cupcakes_3D.png",
                 fit: BoxFit.cover,
               ),
             ),
