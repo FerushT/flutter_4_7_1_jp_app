@@ -27,8 +27,7 @@ class ItemCardSmall extends StatelessWidget {
               useSafeArea: false,
               context: context,
               builder: (BuildContext context) {
-                return const FractionallySizedBox(
-                    heightFactor: 0.885, child: DetailCard());
+                return const DetailCard();
               },
             );
           },
@@ -36,7 +35,7 @@ class ItemCardSmall extends StatelessWidget {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(borderRadius),
             ),
-            color: Colors.transparent, // Transparent color for the Card
+            color: Colors.transparent,
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(borderRadius),
@@ -45,7 +44,7 @@ class ItemCardSmall extends StatelessWidget {
                     Color.fromARGB(255, 103, 103, 106),
                     Color.fromARGB(255, 108, 101, 185),
                     Color.fromARGB(255, 108, 75, 181),
-                  ], // Change colors as needed
+                  ],
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                 ),
