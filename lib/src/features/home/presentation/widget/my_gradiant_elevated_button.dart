@@ -28,14 +28,24 @@ class MyGradientElevatedButton extends StatelessWidget {
       height: height,
       width: width,
       decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [colorBegin, colorEnd],
-        ),
-        borderRadius: BorderRadius.circular(borderRadius),
-      ),
+          gradient: LinearGradient(
+            colors: [colorBegin, colorEnd],
+          ),
+          borderRadius: BorderRadius.circular(borderRadius),
+          border: Border.all(
+              color: const Color.fromARGB(255, 227, 162, 241).withOpacity(0.5),
+              width: 2),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.purple.withOpacity(0.6),
+              spreadRadius: 6,
+              blurRadius: 17,
+              offset: const Offset(0, 12),
+            ),
+          ]),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-            padding: EdgeInsets.all(0),
+            padding: const EdgeInsets.all(0),
             backgroundColor: Colors.transparent,
             shadowColor: Colors.transparent),
         onPressed: onPressed,
