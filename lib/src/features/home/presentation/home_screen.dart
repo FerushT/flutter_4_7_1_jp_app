@@ -34,65 +34,62 @@ class HomeScreen extends StatelessWidget {
                   textAlign: TextAlign.start,
                 ),
                 const SizedBox(height: 12),
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      buildCategoryButton(
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              SFIcon(
-                                SFIcons.sf_takeoutbag_and_cup_and_straw,
-                                fontSize: 11,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white.withOpacity(0.5),
-                              ),
-                              Text(
-                                " All categories ",
-                                style: TextStyle(
-                                    color: Colors.white.withOpacity(0.5),
-                                    letterSpacing: -0.5,
-                                    fontSize: 11,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              SFIcon(
-                                SFIcons.sf_chevron_down,
-                                fontSize: 11,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white.withOpacity(0.5),
-                              ),
-                            ],
-                          ),
-                          140),
-                      buildCategoryButtonSelected(const Text(
-                        "Salty",
-                        style: TextStyle(
-                            color: Color.fromARGB(255, 0, 0, 0),
-                            letterSpacing: -0.5,
-                            fontSize: 11,
-                            fontWeight: FontWeight.w800),
-                      )),
-                      buildCategoryButton(
-                          Text(
-                            "Sweet",
-                            style: TextStyle(
-                                color: Colors.white.withOpacity(0.5),
-                                letterSpacing: -0.5,
-                                fontSize: 12),
-                          ),
-                          90),
-                      buildCategoryButton(
-                          Text(
-                            "Dry Fruits",
-                            style: TextStyle(
-                                color: Colors.white.withOpacity(0.5),
-                                letterSpacing: -0.5,
-                                fontSize: 12),
-                          ),
-                          90),
-                    ],
-                  ),
+                Row(
+                  children: [
+                    buildCategoryButton(
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            SFIcon(
+                              SFIcons.sf_takeoutbag_and_cup_and_straw,
+                              fontSize: 11,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white.withOpacity(0.5),
+                            ),
+                            Text(
+                              " All categories ",
+                              style: TextStyle(
+                                  color: Colors.white.withOpacity(0.5),
+                                  letterSpacing: -0.5,
+                                  fontSize: 11,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            SFIcon(
+                              SFIcons.sf_chevron_down,
+                              fontSize: 11,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white.withOpacity(0.5),
+                            ),
+                          ],
+                        ),
+                        140),
+                    buildCategoryButtonSelected(const Text(
+                      "Salty",
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 0, 0, 0),
+                          letterSpacing: -0.5,
+                          fontSize: 11,
+                          fontWeight: FontWeight.w800),
+                    )),
+                    buildCategoryButton(
+                        Text(
+                          "Sweet",
+                          style: TextStyle(
+                              color: Colors.white.withOpacity(0.5),
+                              letterSpacing: -0.5,
+                              fontSize: 12),
+                        ),
+                        90),
+                    buildCategoryButton(
+                        Text(
+                          "Dry Fruits",
+                          style: TextStyle(
+                              color: Colors.white.withOpacity(0.5),
+                              letterSpacing: -0.5,
+                              fontSize: 12),
+                        ),
+                        90),
+                  ],
                 ),
                 const SizedBox(
                   height: 42,
@@ -121,6 +118,11 @@ class HomeScreen extends StatelessWidget {
                           imageTitle: "Mogli's Cup",
                           imageDescription: "Strawberry ice cream",
                           imageLikes: "200"),
+                      ItemCardSmall(
+                          imagePath: "assets/grafiken/Ice_cream.png",
+                          imageTitle: "Balu's Cup",
+                          imageDescription: "Pistachio ice cream",
+                          imageLikes: "100"),
                       ItemCardSmall(
                           imagePath: "assets/grafiken/Ice_cream.png",
                           imageTitle: "Balu's Cup",
