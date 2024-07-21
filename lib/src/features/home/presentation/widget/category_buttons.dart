@@ -24,7 +24,7 @@ Widget buildCategoryButton(Widget child, double width) {
             padding: const WidgetStatePropertyAll(EdgeInsets.zero),
             shadowColor: WidgetStateProperty.all(Colors.transparent),
             backgroundColor: WidgetStateProperty.all(
-              const Color.fromARGB(40, 255, 255, 255),
+              Color.fromARGB(31, 255, 255, 255),
             ),
           ),
           child: child,
@@ -52,7 +52,7 @@ Widget buildCategoryButtonSelected(Widget child) {
             padding: const WidgetStatePropertyAll(EdgeInsets.zero),
             shadowColor: WidgetStateProperty.all(Colors.transparent),
             backgroundColor: WidgetStateProperty.all(
-              const Color.fromARGB(187, 255, 255, 255),
+              const Color.fromARGB(255, 239, 206, 236),
             ),
           ),
           child: child,
