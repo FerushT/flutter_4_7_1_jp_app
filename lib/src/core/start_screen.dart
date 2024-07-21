@@ -24,7 +24,7 @@ class StartScreen extends StatelessWidget {
               height: 550,
               width: 550,
               child: Image.asset(
-                "assets/grafiken/cat_cupcakes_3D.png",
+                "assets/grafiken/chick_cupcakes_3D.png",
                 fit: BoxFit.cover,
               ),
             ),
@@ -58,7 +58,10 @@ class StartScreen extends StatelessWidget {
                       const Text(
                         "Feeling Snackish Today?",
                         style: TextStyle(
-                            fontSize: 21, fontWeight: FontWeight.w900),
+                          fontSize: 21,
+                          fontWeight: FontWeight.w900,
+                          color: Color.fromARGB(255, 255, 255, 255),
+                        ),
                       ),
                       const Text(
                         "Explore Angi's most popular snack selection and get instantly happy.",
