@@ -4,8 +4,8 @@ import 'package:flutter_4_7_1_jp_app/src/features/home/presentation/widget/my_ci
 import 'package:flutter_4_7_1_jp_app/src/features/home/presentation/widget/my_gradiant_elevated_button.dart';
 import 'package:flutter_4_7_1_jp_app/src/features/home/presentation/widget/my_ingredients_widget.dart';
 import 'package:flutter_4_7_1_jp_app/src/features/home/presentation/widget/my_reviews_widget.dart';
+import 'package:flutter_4_7_1_jp_app/src/features/home/presentation/widget/my_toggleSwitch_widget.dart';
 import 'package:flutter_sficon/flutter_sficon.dart';
-import 'package:toggle_switch/toggle_switch.dart';
 
 class DetailCard extends StatelessWidget {
   const DetailCard({super.key});
@@ -36,14 +36,14 @@ class DetailCard extends StatelessWidget {
         Positioned(
           top: -133,
           child: SizedBox(
-            height: 400,
+            height: 395,
             child: Image.asset(
               "assets/grafiken/cat_cupcakes_3D.png",
               fit: BoxFit.cover,
             ),
           ),
         ),
-        Positioned(
+        const Positioned(
           top: 20,
           right: 15,
           height: 30,
@@ -73,7 +73,7 @@ class DetailCard extends StatelessWidget {
                       color: const Color.fromARGB(255, 193, 170, 218),
                       width: 0.2),
                 ),
-                child: Column(
+                child: const Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -81,41 +81,44 @@ class DetailCard extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        const Icon(
+                        Icon(
                           Icons.favorite_border,
+                          color: Color.fromARGB(255, 166, 155, 151),
                           size: 15,
                         ),
-                        Text(" 200",
-                            textAlign: TextAlign.end,
-                            style: TextStyle(
-                                fontSize: 13,
-                                fontFamily: "Inter",
-                                color: Colors.white.withOpacity(0.8),
-                                letterSpacing: -0.5,
-                                fontWeight: FontWeight.w400)),
+                        Text(
+                          " 200",
+                          textAlign: TextAlign.end,
+                          style: TextStyle(
+                              fontSize: 13,
+                              fontFamily: "Inter",
+                              color: Color.fromARGB(255, 166, 155, 151),
+                              letterSpacing: -0.5,
+                              fontWeight: FontWeight.w400),
+                        ),
                       ],
                     ),
-                    const Text(
+                    Text(
                       "Mogli's Cup",
                       style: TextStyle(
                           fontSize: 25,
                           letterSpacing: -0.5,
                           fontWeight: FontWeight.w900),
                     ),
-                    const Text(
-                      "Lorem ipsum dolor sit amet consectetur. Non feugiat imperdiet a vel sit at amet. Mi accumsan feugiat magna aliquam feugiat ac et. Pulnivar hendrerit id arcu at sed etiam semper mi hendrerit. Id aliquet quis quam.",
-                      style: TextStyle(fontSize: 10),
+                    Text(
+                      "Lorem ipsum dolor sit amet consectetur. Non feugiat imperdiet a vel sit at amet. Mi\naccumsan feugiat magna aliquam feugiat ac et. Pulnivar hendrerit id arcu at sed etiam semper mi hendrerit. Id aliquet quis quam.",
+                      style: TextStyle(fontSize: 11.5),
                       textAlign: TextAlign.center,
                     ),
-                    const Text(
+                    Text(
                       "₳ 8.99",
                       style:
                           TextStyle(fontSize: 16, fontWeight: FontWeight.w900),
                     ),
-                    const Divider(
-                      color: Color.fromARGB(255, 154, 154, 154),
+                    Divider(
+                      color: Color.fromARGB(255, 91, 87, 82),
                     ),
-                    const Row(
+                    Row(
                       children: [
                         MyIngredientsWidget(),
                         Expanded(child: SizedBox()),
@@ -128,31 +131,8 @@ class DetailCard extends StatelessWidget {
             ),
           ),
         ),
-        Positioned(
-          bottom: 155,
-          left: 21,
-          child: ToggleSwitch(
-            initialLabelIndex: 2,
-            totalSwitches: 3,
-            labels: const ["Small", "Medium", "Large"],
-            onToggle: (index) {},
-            activeBgColor: const [
-              Color.fromARGB(255, 113, 113, 113),
-            ],
-            inactiveBgColor: const Color.fromARGB(255, 80, 80, 80),
-            activeFgColor: Colors.white,
-            fontSize: 11.3,
-            dividerMargin: 9,
-            radiusStyle: true,
-            minHeight: 30,
-            customWidths: const [
-              55,
-              65,
-              55,
-            ],
-          ),
-        ),
-        Positioned(
+        const MyToggleswitchWidget(),
+        const Positioned(
           bottom: 155,
           right: 100,
           height: 30,
@@ -173,7 +153,7 @@ class DetailCard extends StatelessWidget {
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
           ),
         ),
-        Positioned(
+        const Positioned(
           bottom: 155,
           right: 21,
           height: 30,
