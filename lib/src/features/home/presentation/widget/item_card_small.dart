@@ -5,17 +5,21 @@ class ItemCardSmall extends StatelessWidget {
   final String imagePath;
   final String imageTitle;
   final String imageDescription;
+  final String imageLikes;
+
   const ItemCardSmall(
       {super.key,
       required this.imagePath,
       required this.imageTitle,
-      required this.imageDescription});
+      required this.imageDescription,
+      required this.imageLikes});
+
   @override
   Widget build(BuildContext context) {
     const double borderRadius = 27;
     return SizedBox(
       height: 270,
-      width: 220,
+      width: 205,
       child: Padding(
         padding: const EdgeInsets.only(right: 8),
         child: GestureDetector(
@@ -23,7 +27,8 @@ class ItemCardSmall extends StatelessWidget {
             showModalBottomSheet(
               isScrollControlled: true,
               elevation: 1,
-              shape: LinearBorder.end(),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10)),
               useSafeArea: false,
               context: context,
               builder: (BuildContext context) {
@@ -39,6 +44,10 @@ class ItemCardSmall extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(borderRadius),
+                border: Border.all(
+                  color: const Color.fromARGB(233, 162, 155, 216),
+                  width: 0.9,
+                ),
                 gradient: const LinearGradient(
                   colors: [
                     Color.fromARGB(255, 103, 103, 106),
@@ -60,33 +69,45 @@ class ItemCardSmall extends StatelessWidget {
                     imageTitle,
                     textAlign: TextAlign.left,
                     style: const TextStyle(
-                        color: Colors.white, fontWeight: FontWeight.bold),
+                        fontSize: 12, fontWeight: FontWeight.bold),
                   ),
                   Text(
                     imageDescription,
                     textAlign: TextAlign.left,
+                    style: TextStyle(
+                      fontSize: 11,
+                      color: const Color.fromARGB(255, 255, 255, 255)
+                          .withOpacity(0.5),
+                    ),
                   ),
                   const SizedBox(height: 8),
-                  const Row(
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
+                      const Text(
                         "₳ 8.99",
                         style: TextStyle(
                           color: Colors.white,
+                          fontSize: 12.5,
                         ),
                       ),
                       Row(
                         children: [
-                          Icon(
+                          const Icon(
                             Icons.favorite_border_outlined,
                             color: Color.fromARGB(255, 172, 170, 170),
                             size: 14,
                           ),
+                          const SizedBox(
+                            width: 2,
+                          ),
                           Text(
-                            ' 200',
-                            style: TextStyle(
-                                color: Color.fromARGB(255, 172, 170, 170)),
+                            imageLikes,
+                            textAlign: TextAlign.right,
+                            style: const TextStyle(
+                              fontSize: 12.5,
+                              color: Color.fromARGB(255, 172, 170, 170),
+                            ),
                           )
                         ],
                       )
