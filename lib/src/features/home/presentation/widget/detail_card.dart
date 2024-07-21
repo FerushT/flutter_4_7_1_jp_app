@@ -65,8 +65,8 @@ class DetailCard extends StatelessWidget {
             child: BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 18.0, sigmaY: 18.0),
               child: Container(
-                height: 350,
-                padding: const EdgeInsets.all(25),
+                height: 340,
+                padding: const EdgeInsets.fromLTRB(25, 16, 25, 16),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(35),
                   border: Border.all(
@@ -74,8 +74,6 @@ class DetailCard extends StatelessWidget {
                       width: 0.2),
                 ),
                 child: const Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -105,23 +103,30 @@ class DetailCard extends StatelessWidget {
                           letterSpacing: -0.5,
                           fontWeight: FontWeight.w900),
                     ),
+                    SizedBox(
+                      height: 10,
+                    ),
                     Text(
                       "Lorem ipsum dolor sit amet consectetur. Non feugiat imperdiet a vel sit at amet. Mi\naccumsan feugiat magna aliquam feugiat ac et. Pulnivar hendrerit id arcu at sed etiam semper mi hendrerit. Id aliquet quis quam.",
-                      style: TextStyle(fontSize: 11.5),
+                      style: TextStyle(fontSize: 13),
                       textAlign: TextAlign.center,
+                    ),
+                    SizedBox(
+                      height: 19,
                     ),
                     Text(
                       "₳ 8.99",
                       style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.w900),
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.w900),
                     ),
                     Divider(
                       color: Color.fromARGB(255, 91, 87, 82),
+                      height: 40,
                     ),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         MyIngredientsWidget(),
-                        Expanded(child: SizedBox()),
                         MyReviewsWidget(),
                       ],
                     ),
