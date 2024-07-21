@@ -9,7 +9,6 @@ class MyCircleButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(50),
-      clipBehavior: Clip.antiAlias,
       child: GestureDetector(
         onTap: () {},
         child: Container(
