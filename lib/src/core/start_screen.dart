@@ -33,7 +33,9 @@ class StartScreen extends StatelessWidget {
             bottom: 100,
             left: 3,
             child: Opacity(
-                opacity: 0.3, child: Image.asset("assets/details/T2.png")),
+              opacity: 0.3,
+              child: Image.asset("assets/details/T2.png"),
+            ),
           ),
           Positioned(
             bottom: 85,
@@ -76,9 +78,11 @@ class StartScreen extends StatelessWidget {
                           width: 185,
                           onPressed: () {
                             Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const HomeScreen()));
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const HomeScreen(),
+                              ),
+                            );
                           },
                           colorBegin: Color.fromARGB(255, 237, 99, 208),
                           colorEnd: Color.fromARGB(255, 247, 148, 186),
