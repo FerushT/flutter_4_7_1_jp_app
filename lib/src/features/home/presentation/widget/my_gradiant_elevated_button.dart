@@ -37,10 +37,10 @@ class MyGradientElevatedButton extends StatelessWidget {
               width: 2),
           boxShadow: [
             BoxShadow(
-              color: Colors.purple.withOpacity(0.6),
-              spreadRadius: 6,
-              blurRadius: 17,
-              offset: const Offset(0, 12),
+              color: const Color.fromARGB(255, 140, 74, 144).withOpacity(0.5),
+              spreadRadius: 2,
+              blurRadius: 15,
+              offset: const Offset(0, 15),
             ),
           ]),
       child: ElevatedButton(
