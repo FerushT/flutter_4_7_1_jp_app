@@ -19,9 +19,15 @@ class ItemCardBig extends StatelessWidget {
               height: 240,
               width: 360,
               decoration: const BoxDecoration(
+                // borderRadius: BorderRadius.circular(40),
+                // border: Border.all(
+                //   color: Colors.white,
+                //   width: 0.2,
+                // ),
                 image: DecorationImage(
                     image: AssetImage("assets/details/Top Card.png"),
-                    opacity: 0.1),
+                    opacity: 0.1,
+                    fit: BoxFit.contain),
               ),
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -85,14 +91,16 @@ class ItemCardBig extends StatelessWidget {
                                 "assets/grafiken/star.png",
                               ),
                             ),
-                            Text(" 4.8",
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    fontSize: 11,
-                                    fontFamily: "Inter",
-                                    color: Colors.white.withOpacity(0.8),
-                                    letterSpacing: -0.5,
-                                    fontWeight: FontWeight.w400)),
+                            Text(
+                              " 4.8",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  fontSize: 11,
+                                  fontFamily: "Inter",
+                                  color: Colors.white.withOpacity(0.8),
+                                  letterSpacing: -0.5,
+                                  fontWeight: FontWeight.w700),
+                            ),
                           ],
                         ),
                       ],
